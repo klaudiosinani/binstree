@@ -24,7 +24,7 @@ class Node {
   }
 
   get value() {
-    return value;
+    return this._value;
   }
 
   set value(value) {
