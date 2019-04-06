@@ -19,5 +19,8 @@
     "es6",
     "data",
     "structure"
-  ]
+  ],
+  "devDependencies": {
+    "xo": "^0.24.0"
+  }
 }
