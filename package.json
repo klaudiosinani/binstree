@@ -1,0 +1,23 @@
+{
+  "name": "bstrie",
+  "version": "0.0.0",
+  "description": "🌲 Binary search trees for ES6",
+  "license": "MIT",
+  "repository": "klaussinani/bstrie",
+  "author": {
+    "name": "Klaus Sinani",
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "binary",
+    "search",
+    "tree",
+    "es6",
+    "data",
+    "structure"
+  ]
+}
