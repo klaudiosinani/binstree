@@ -20,6 +20,9 @@
     "data",
     "structure"
   ],
+  "scripts": {
+    "lint": "xo"
+  },
   "devDependencies": {
     "xo": "^0.24.0"
   },
