@@ -22,5 +22,8 @@
   ],
   "devDependencies": {
     "xo": "^0.24.0"
+  },
+  "xo": {
+    "space": 2
   }
 }
