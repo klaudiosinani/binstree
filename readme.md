@@ -26,7 +26,6 @@ Visit the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/m
 - [Description](#description)
 - [Install](#install)
 - [Usage](#usage)
-- [In Depth](#in-depth)
 - [API](#api)
 - [Development](#development)
 - [Related](#related)
