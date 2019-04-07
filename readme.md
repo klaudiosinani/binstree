@@ -62,7 +62,7 @@ For more info on how to contribute to the project, please read the [contributing
 ## Related
 
 - [doublie](https://github.com/klaussinani/doublie) - Doubly circular & linear linked lists for ES6
-- [doublie](https://github.com/klaussinani/singlie) - Singly circular & linear linked lists for ES6
+- [singlie](https://github.com/klaussinani/singlie) - Singly circular & linear linked lists for ES6
 
 ## Team
 
