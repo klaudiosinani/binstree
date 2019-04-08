@@ -26,7 +26,7 @@ class Tree {
     }
   }
 
-  contains(value) {
+  includes(value) {
     let {_root: current} = this;
 
     while (current) {
