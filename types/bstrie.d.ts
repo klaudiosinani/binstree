@@ -18,6 +18,7 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: node.Instance<T> | null;
     insert(...values: T[]): this;
+    isEmpty(): boolean;
   }
 }
 

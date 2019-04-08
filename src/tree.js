@@ -39,6 +39,10 @@ class Tree {
     });
     return this;
   }
+
+  isEmpty() {
+    return !this.root;
+  }
 }
 
 module.exports = Tree;
