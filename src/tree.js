@@ -26,6 +26,20 @@ class Tree {
     }
   }
 
+  contains(value) {
+    let {_root: current} = this;
+
+    while (current) {
+      if (value === current.value) {
+        return true;
+      }
+
+      current = value < current.value ? current.left : current.right;
+    }
+
+    return false;
+  }
+
   insert(...values) {
     values.forEach(value => {
       const {_root} = this;
