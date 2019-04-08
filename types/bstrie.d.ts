@@ -20,6 +20,7 @@ declare namespace tree {
     includes(value: T): boolean;
     insert(...values: T[]): this;
     isEmpty(): boolean;
+    max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
   }
 }
