@@ -58,6 +58,18 @@ class Tree {
     return !this.root;
   }
 
+  max() {
+    let {_root: current} = this;
+
+    if (current) {
+      while (current.right) {
+        current = current.right;
+      }
+    }
+
+    return current;
+  }
+
   min() {
     let {_root: current} = this;
 
