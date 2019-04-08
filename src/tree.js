@@ -71,15 +71,15 @@ class Tree {
   }
 
   min() {
-    let {_root: current} = this;
+    let {_root: min} = this;
 
-    if (current) {
-      while (current.left) {
-        current = current.left;
+    if (min) {
+      while (min.left) {
+        min = min.left;
       }
     }
 
-    return current;
+    return min;
   }
 }
 
