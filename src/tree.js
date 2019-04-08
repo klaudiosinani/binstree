@@ -57,6 +57,18 @@ class Tree {
   isEmpty() {
     return !this.root;
   }
+
+  min() {
+    let {_root: current} = this;
+
+    if (current) {
+      while (current.left) {
+        current = current.left;
+      }
+    }
+
+    return current;
+  }
 }
 
 module.exports = Tree;
