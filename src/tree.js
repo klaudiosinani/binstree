@@ -59,15 +59,15 @@ class Tree {
   }
 
   max() {
-    let {_root: current} = this;
+    let {_root: max} = this;
 
-    if (current) {
-      while (current.right) {
-        current = current.right;
+    if (max) {
+      while (max.right) {
+        max = max.right;
       }
     }
 
-    return current;
+    return max;
   }
 
   min() {
