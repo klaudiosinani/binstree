@@ -30,6 +30,10 @@ class Node {
   set value(value) {
     this._value = value;
   }
+
+  isLeaf() {
+    return !this.left && !this.right;
+  }
 }
 
 module.exports = Node;
