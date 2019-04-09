@@ -22,7 +22,8 @@
     "structure"
   ],
   "scripts": {
-    "lint": "xo"
+    "lint": "xo",
+    "test": "npm run lint"
   },
   "devDependencies": {
     "xo": "^0.24.0"
