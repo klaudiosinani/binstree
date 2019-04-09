@@ -34,3 +34,5 @@ declare const bstrie: {
   Node: node.Constructor;
   Tree: tree.Constructor;
 };
+
+export = bstrie;
