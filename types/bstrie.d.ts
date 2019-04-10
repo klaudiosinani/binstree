@@ -1,4 +1,6 @@
 declare namespace node {
+  type Degree = 0 | 1 | 2;
+
   export interface Constructor {
     new <T = any>(value?: T): Instance<T>;
   }
@@ -7,6 +9,7 @@ declare namespace node {
     value: T;
     left: Instance<T> | null;
     right: Instance<T> | null;
+    readonly degree: Degree;
     isInternal(): boolean;
     isLeaf(): boolean;
   }
