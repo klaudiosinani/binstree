@@ -11,18 +11,26 @@ class Tree {
   }
 
   _insert(node, target) {
-    if (node.value < target.value) {
-      if (target.left) {
-        return this._insert(node, target.left);
+    while (target) {
+      if (node.value === target.value) {
+        return;
       }
 
-      target.left = node;
-    } else {
-      if (target.right) {
-        return this._insert(node, target.right);
-      }
+      if (node.value < target.value) {
+        if (!target.left) {
+          target.left = node;
+          return;
+        }
 
-      target.right = node;
+        target = target.left;
+      } else {
+        if (!target.right) {
+          target.right = node;
+          return;
+        }
+
+        target = target.right;
+      }
     }
   }
 
