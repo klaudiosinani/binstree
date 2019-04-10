@@ -23,6 +23,7 @@ declare namespace tree {
     isEmpty(): boolean;
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
+    search(value: T): node.Instance<T> | null;
   }
 }
 

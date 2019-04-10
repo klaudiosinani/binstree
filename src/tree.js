@@ -89,6 +89,20 @@ class Tree {
 
     return min;
   }
+
+  search(value) {
+    let {_root: current} = this;
+
+    while (current) {
+      if (value === current.value) {
+        return current;
+      }
+
+      current = value < current.value ? current.left : current.right;
+    }
+
+    return current;
+  }
 }
 
 module.exports = Tree;
