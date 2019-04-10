@@ -31,6 +31,10 @@ class Node {
     this._value = value;
   }
 
+  isInternal() {
+    return this.left !== null || this.right !== null;
+  }
+
   isLeaf() {
     return !this.left && !this.right;
   }

@@ -7,6 +7,7 @@ declare namespace node {
     value: T;
     left: Instance<T> | null;
     right: Instance<T> | null;
+    isInternal(): boolean;
     isLeaf(): boolean;
   }
 }
