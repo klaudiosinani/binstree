@@ -31,6 +31,14 @@ You can use issue labels to discover issues you could help us out with.
 
 You may find an issue is assigned, or has the [`assigned` label](https://github.com/klaussinani/bstrie/labels/assigned). Please double-check before starting on this issue because somebody else is likely already working on it.
 
+### Translating Documentation
+
+#### Create a Translation
+
+- Ensure that the document is not already translated in your target language.
+- Add the name of the language to the document as an extension, e.g: `readme.JP.md`
+- Create a Pull Request including the language in the title, e.g: `Readme: Japanese Translation`
+
 ### Submitting an issue
 
 - Search the issue tracker before opening an issue
