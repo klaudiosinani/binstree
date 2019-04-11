@@ -34,6 +34,45 @@ class Tree {
     }
   }
 
+  _min(node) {
+    let min = node;
+
+    while (min.left) {
+      min = min.left;
+    }
+
+    return min;
+  }
+
+  _remove(value, node) {
+    if (value < node.value) {
+      node.left = this._remove(value, node.left);
+      return node;
+    }
+
+    if (value > node.value) {
+      node.right = this._remove(value, node.right);
+      return node;
+    }
+
+    if (node.isLeaf()) {
+      return null;
+    }
+
+    if (!node.left) {
+      return node.right;
+    }
+
+    if (!node.right) {
+      return node.left;
+    }
+
+    const successor = this._min(node.right);
+    node.value = successor.value;
+    node.right = this._remove(successor.value, node.right);
+    return node;
+  }
+
   includes(value) {
     let {_root: current} = this;
 
@@ -88,6 +127,16 @@ class Tree {
     }
 
     return min;
+  }
+
+  remove(value) {
+    const {_root} = this;
+
+    if (_root) {
+      this._root = this._remove(value, _root);
+    }
+
+    return this;
   }
 
   search(value) {
