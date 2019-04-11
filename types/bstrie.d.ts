@@ -27,6 +27,7 @@ declare namespace tree {
     isEmpty(): boolean;
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
+    remove(value: T): this;
     search(value: T): node.Instance<T> | null;
   }
 }
