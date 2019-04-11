@@ -7,6 +7,20 @@ class Node {
     this._value = value;
   }
 
+  get degree() {
+    let degree = 0;
+
+    if (this.left) {
+      degree++;
+    }
+
+    if (this.right) {
+      degree++;
+    }
+
+    return degree;
+  }
+
   get left() {
     return this._left;
   }
