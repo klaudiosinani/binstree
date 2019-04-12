@@ -28,6 +28,7 @@ declare namespace tree {
     isEmpty(): boolean;
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
+    preOrder(fn: (x: T) => void): this;
     remove(value: T): this;
     search(value: T): node.Instance<T> | null;
   }
