@@ -23,6 +23,7 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: node.Instance<T> | null;
     includes(value: T): boolean;
+    inOrder(fn: (x: T) => void): this;
     insert(...values: T[]): this;
     isEmpty(): boolean;
     max(): node.Instance<T> | null;

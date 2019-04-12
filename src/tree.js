@@ -87,6 +87,24 @@ class Tree {
     return false;
   }
 
+  inOrder(fn) {
+    const stack = [];
+    let {_root: current} = this;
+
+    while (current || stack.length > 0) {
+      if (current) {
+        stack.push(current);
+        current = current.left;
+      } else {
+        current = stack.pop();
+        fn(current.value);
+        current = current.right;
+      }
+    }
+
+    return this;
+  }
+
   insert(...values) {
     values.forEach(value => {
       const {_root} = this;
