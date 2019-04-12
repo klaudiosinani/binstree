@@ -16,6 +16,8 @@ declare namespace node {
 }
 
 declare namespace tree {
+  type UnaryCallback<T> = (x: T) => void;
+
   export interface Constructor {
     new <T = any>(): Instance<T>;
   }
@@ -23,12 +25,12 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: node.Instance<T> | null;
     includes(value: T): boolean;
-    inOrder(fn: (x: T) => void): this;
+    inOrder(fn: UnaryCallback<T>): this;
     insert(...values: T[]): this;
     isEmpty(): boolean;
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
-    preOrder(fn: (x: T) => void): this;
+    preOrder(fn: UnaryCallback<T>): this;
     remove(value: T): this;
     search(value: T): node.Instance<T> | null;
   }
