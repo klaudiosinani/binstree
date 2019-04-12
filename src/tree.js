@@ -147,11 +147,19 @@ class Tree {
     return min;
   }
 
-  remove(value) {
-    const {_root} = this;
+  outOrder(fn) {
+    const stack = [];
+    let {_root: current} = this;
 
-    if (_root) {
-      this._root = this._remove(value, _root);
+    while (current || stack.length > 0) {
+      if (current) {
+        stack.push(current);
+        current = current.right;
+      } else {
+        current = stack.pop();
+        fn(current.value);
+        current = current.left;
+      }
     }
 
     return this;
@@ -175,6 +183,16 @@ class Tree {
           stack.push(current.left);
         }
       }
+    }
+
+    return this;
+  }
+
+  remove(value) {
+    const {_root} = this;
+
+    if (_root) {
+      this._root = this._remove(value, _root);
     }
 
     return this;
