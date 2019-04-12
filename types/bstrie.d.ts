@@ -33,6 +33,7 @@ declare namespace tree {
     preOrder(fn: UnaryCallback<T>): this;
     remove(value: T): this;
     search(value: T): node.Instance<T> | null;
+    toArray(): T[];
   }
 }
 

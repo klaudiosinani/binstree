@@ -193,6 +193,12 @@ class Tree {
 
     return current;
   }
+
+  toArray() {
+    const array = [];
+    this.inOrder(x => array.push(x));
+    return array;
+  }
 }
 
 module.exports = Tree;
