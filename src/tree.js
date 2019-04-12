@@ -157,6 +157,29 @@ class Tree {
     return this;
   }
 
+  preOrder(fn) {
+    let {_root: current} = this;
+
+    if (current) {
+      const stack = [current];
+
+      while (stack.length > 0) {
+        current = stack.pop();
+        fn(current.value);
+
+        if (current.right) {
+          stack.push(current.right);
+        }
+
+        if (current.left) {
+          stack.push(current.left);
+        }
+      }
+    }
+
+    return this;
+  }
+
   search(value) {
     let {_root: current} = this;
 
