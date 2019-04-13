@@ -24,6 +24,7 @@ declare namespace tree {
 
   export interface Instance<T> {
     readonly root: node.Instance<T> | null;
+    height(): number;
     includes(value: T): boolean;
     inOrder(fn: UnaryCallback<T>): this;
     insert(...values: T[]): this;
