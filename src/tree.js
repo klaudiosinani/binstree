@@ -123,6 +123,30 @@ class Tree {
     return !this.root;
   }
 
+  levelOrder(fn) {
+    let {_root: current} = this;
+
+    if (current) {
+      const queue = [];
+      queue.push(current);
+
+      while (queue.length > 0) {
+        current = queue.shift();
+        fn(current.value);
+
+        if (current.left) {
+          queue.push(current.left);
+        }
+
+        if (current.right) {
+          queue.push(current.right);
+        }
+      }
+    }
+
+    return this;
+  }
+
   max() {
     let {_root: max} = this;
 
