@@ -31,6 +31,7 @@ declare namespace tree {
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
     outOrder(fn: UnaryCallback<T>): this;
+    postOrder(fn: UnaryCallback<T>): this;
     preOrder(fn: UnaryCallback<T>): this;
     remove(value: T): this;
     search(value: T): node.Instance<T> | null;
