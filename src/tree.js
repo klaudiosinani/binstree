@@ -229,7 +229,7 @@ class Tree {
         if (recent.right && recent.right !== last) {
           current = recent.right;
         } else {
-          fn(recent.value);
+          fn(recent);
           last = stack.pop();
         }
       }
