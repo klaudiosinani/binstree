@@ -26,7 +26,7 @@ declare namespace tree {
     readonly root: node.Instance<T> | null;
     height(): number;
     includes(value: T): boolean;
-    inOrder(fn: UnaryCallback<T>): this;
+    inOrder(fn: UnaryCallback<node.Instance<T>>): this;
     insert(...values: T[]): this;
     isEmpty(): boolean;
     levelOrder(fn: UnaryCallback<node.Instance<T>>): this;
