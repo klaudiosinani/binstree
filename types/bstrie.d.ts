@@ -34,6 +34,7 @@ declare namespace tree {
     insert(...values: T[]): this;
     isEmpty(): boolean;
     isFull(): boolean;
+    isPerfect(): boolean;
     leaves(): number;
     levelOrder(fn: UnaryCallback<Node<T>>): this;
     max(): Node<T> | null;
