@@ -135,6 +135,28 @@ class Tree {
     return !this.root;
   }
 
+  isFull() {
+    let {_root: current} = this;
+
+    if (current) {
+      const queue = [current];
+
+      while (queue.length > 0) {
+        current = queue.shift();
+
+        if (current.degree === 1) {
+          return false;
+        }
+
+        if (current.isFull()) {
+          queue.push(current.left, current.right);
+        }
+      }
+    }
+
+    return true;
+  }
+
   leaves() {
     let leaves = 0;
 
