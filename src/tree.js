@@ -37,8 +37,10 @@ class Tree {
   _min(node) {
     let min = node;
 
-    while (min.left) {
-      min = min.left;
+    if (min) {
+      while (min.left) {
+        min = min.left;
+      }
     }
 
     return min;
@@ -191,15 +193,7 @@ class Tree {
   }
 
   min() {
-    let {_root: min} = this;
-
-    if (min) {
-      while (min.left) {
-        min = min.left;
-      }
-    }
-
-    return min;
+    return this._min(this._root);
   }
 
   outOrder(fn) {
