@@ -76,34 +76,13 @@ class Tree {
   }
 
   height() {
-    let height = -1;
-    let {_root: current} = this;
+    const {_root} = this;
 
-    if (current) {
-      const queue = [];
-      queue.push(current);
-
-      while (queue.length > 0) {
-        height += 1;
-        let nodes = queue.length;
-
-        while (nodes > 0) {
-          current = queue.shift();
-
-          if (current.left) {
-            queue.push(current.left);
-          }
-
-          if (current.right) {
-            queue.push(current.right);
-          }
-
-          nodes--;
-        }
-      }
+    if (_root) {
+      return _root.height();
     }
 
-    return height;
+    return -1;
   }
 
   includes(value) {
