@@ -165,7 +165,7 @@ class Tree {
 
       while (queue.length > 0) {
         current = queue.shift();
-        fn(current.value);
+        fn(current);
 
         if (current.left) {
           queue.push(current.left);

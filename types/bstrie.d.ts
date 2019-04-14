@@ -29,7 +29,7 @@ declare namespace tree {
     inOrder(fn: UnaryCallback<T>): this;
     insert(...values: T[]): this;
     isEmpty(): boolean;
-    levelOrder(fn: UnaryCallback<T>): this;
+    levelOrder(fn: UnaryCallback<node.Instance<T>>): this;
     max(): node.Instance<T> | null;
     min(): node.Instance<T> | null;
     outOrder(fn: UnaryCallback<T>): this;
