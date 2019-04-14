@@ -135,6 +135,18 @@ class Tree {
     return !this.root;
   }
 
+  leaves() {
+    let leaves = 0;
+
+    this.inOrder(x => {
+      if (x.isLeaf()) {
+        leaves++;
+      }
+    });
+
+    return leaves;
+  }
+
   levelOrder(fn) {
     let {_root: current} = this;
 
