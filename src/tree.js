@@ -246,7 +246,7 @@ class Tree {
 
       while (stack.length > 0) {
         current = stack.pop();
-        fn(current.value);
+        fn(current);
 
         if (current.right) {
           stack.push(current.right);
