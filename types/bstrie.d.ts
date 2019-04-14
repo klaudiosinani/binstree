@@ -11,6 +11,7 @@ declare namespace node {
     right: Instance<T> | null;
     readonly degree: Degree;
     height(): number;
+    isFull(): boolean;
     isInternal(): boolean;
     isLeaf(): boolean;
   }
