@@ -74,6 +74,10 @@ class Node {
     return height;
   }
 
+  isFull() {
+    return this.left && this.right;
+  }
+
   isInternal() {
     return this.left !== null || this.right !== null;
   }
