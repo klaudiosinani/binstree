@@ -157,6 +157,35 @@ class Tree {
     return true;
   }
 
+  isPerfect() {
+    let {_root: current} = this;
+
+    if (current) {
+      let sawLeaf = false;
+      const queue = [current];
+
+      while (queue.length > 0) {
+        current = queue.shift();
+
+        if (current.degree === 1) {
+          return false;
+        }
+
+        if (current.isLeaf()) {
+          sawLeaf = true;
+        } else {
+          if (sawLeaf) {
+            return false;
+          }
+
+          queue.push(current.left, current.right);
+        }
+      }
+    }
+
+    return true;
+  }
+
   leaves() {
     let leaves = 0;
 
