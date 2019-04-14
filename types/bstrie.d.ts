@@ -10,6 +10,7 @@ declare namespace node {
     left: Instance<T> | null;
     right: Instance<T> | null;
     readonly degree: Degree;
+    height(): number;
     isInternal(): boolean;
     isLeaf(): boolean;
   }
