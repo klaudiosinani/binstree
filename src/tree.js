@@ -130,7 +130,7 @@ class Tree {
         current = current.left;
       } else {
         current = stack.pop();
-        fn(current.value);
+        fn(current);
         current = current.right;
       }
     }
