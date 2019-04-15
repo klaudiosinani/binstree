@@ -131,6 +131,18 @@ class Tree {
     return this;
   }
 
+  internals() {
+    let internals = 0;
+
+    this.inOrder(x => {
+      if (x.isInternal()) {
+        internals++;
+      }
+    })
+
+    return internals;
+  }
+
   isComplete() {
     let {_root: current} = this;
 
