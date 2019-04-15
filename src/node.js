@@ -45,6 +45,20 @@ class Node {
     this._value = value;
   }
 
+  children() {
+    const children = [];
+
+    if (this.left) {
+      children.push(this.left);
+    }
+
+    if (this.right) {
+      children.push(this.right);
+    }
+
+    return children;
+  }
+
   height() {
     let height = -1;
     let current = this;
