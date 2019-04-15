@@ -14,6 +14,7 @@ declare namespace node {
     isFull(): boolean;
     isInternal(): boolean;
     isLeaf(): boolean;
+    isLeftPartial(): boolean;
     isPartial(): boolean;
   }
 }

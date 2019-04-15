@@ -86,6 +86,10 @@ class Node {
     return !this.left && !this.right;
   }
 
+  isLeftPartial() {
+    return this.left !== null && !this.right;
+  }
+
   isPartial() {
     return this.degree === 1;
   }
