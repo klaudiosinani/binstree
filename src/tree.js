@@ -138,7 +138,7 @@ class Tree {
       if (x.isInternal()) {
         internals++;
       }
-    })
+    });
 
     return internals;
   }
