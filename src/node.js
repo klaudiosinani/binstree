@@ -97,7 +97,6 @@ class Node {
   isRightPartial() {
     return !this.left && this.right !== null;
   }
-
 }
 
 module.exports = Node;
