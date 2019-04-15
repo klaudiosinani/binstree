@@ -7,6 +7,20 @@ class Node {
     this._value = value;
   }
 
+  get children() {
+    const children = [];
+
+    if (this.left) {
+      children.push(this.left);
+    }
+
+    if (this.right) {
+      children.push(this.right);
+    }
+
+    return children;
+  }
+
   get degree() {
     let degree = 0;
 
@@ -43,20 +57,6 @@ class Node {
 
   set value(value) {
     this._value = value;
-  }
-
-  children() {
-    const children = [];
-
-    if (this.left) {
-      children.push(this.left);
-    }
-
-    if (this.right) {
-      children.push(this.right);
-    }
-
-    return children;
   }
 
   height() {

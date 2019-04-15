@@ -9,8 +9,8 @@ declare namespace node {
     value: T;
     left: Instance<T> | null;
     right: Instance<T> | null;
+    readonly children: Instance<T>[];
     readonly degree: Degree;
-    children(): Instance<T>[];
     height(): number;
     isFull(): boolean;
     isInternal(): boolean;
