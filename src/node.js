@@ -85,6 +85,10 @@ class Node {
   isLeaf() {
     return !this.left && !this.right;
   }
+
+  isPartial() {
+    return this.degree === 1;
+  }
 }
 
 module.exports = Node;
