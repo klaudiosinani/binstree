@@ -33,6 +33,7 @@ declare namespace tree {
   export interface Instance<T> {
     readonly root: Node<T> | null;
     height(): number;
+    fullNodes(): number;
     includes(value: T): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     insert(...values: T[]): this;
