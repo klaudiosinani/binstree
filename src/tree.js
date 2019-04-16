@@ -85,6 +85,18 @@ class Tree {
     return -1;
   }
 
+  fullNodes() {
+    let full = 0;
+
+    this.inOrder(x => {
+      if (x.isFull()) {
+        full++;
+      }
+    });
+
+    return full;
+  }
+
   includes(value) {
     let {_root: current} = this;
 
