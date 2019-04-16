@@ -251,14 +251,7 @@ class Tree {
       while (queue.length > 0) {
         current = queue.shift();
         fn(current);
-
-        if (current.left) {
-          queue.push(current.left);
-        }
-
-        if (current.right) {
-          queue.push(current.right);
-        }
+        queue.push(...current.children);
       }
     }
 
