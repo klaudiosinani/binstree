@@ -264,7 +264,7 @@ class Tree {
     return true;
   }
 
-  leaves() {
+  leaveNodes() {
     let leaves = 0;
 
     this.inOrder(x => {
