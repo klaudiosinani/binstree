@@ -36,7 +36,7 @@ declare namespace tree {
     includes(value: T): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     insert(...values: T[]): this;
-    internals(): number;
+    internalNodes(): number;
     isBalanced(): boolean;
     isComplete(): boolean;
     isEmpty(): boolean;

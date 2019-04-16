@@ -131,7 +131,7 @@ class Tree {
     return this;
   }
 
-  internals() {
+  internalNodes() {
     let internals = 0;
 
     this.inOrder(x => {
