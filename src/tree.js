@@ -143,6 +143,41 @@ class Tree {
     return internals;
   }
 
+  isBalanced() {
+    let {_root: current} = this;
+
+    if (current) {
+      let height = 0;
+      const queue = [current];
+      let [minHeight, maxHeight] = [Infinity, -Infinity];
+
+      while (queue.length > 0) {
+        let nodes = queue.length;
+
+        while (nodes > 0) {
+          current = queue.shift();
+
+          if (current.isLeaf()) {
+            minHeight = minHeight > height ? height : minHeight;
+            maxHeight = maxHeight < height ? height : maxHeight;
+          } else {
+            queue.push(...current.children);
+          }
+
+          nodes--;
+        }
+
+        if (maxHeight - minHeight > 1) {
+          return false;
+        }
+
+        height++;
+      }
+    }
+
+    return true;
+  }
+
   isComplete() {
     let {_root: current} = this;
 
