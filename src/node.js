@@ -22,17 +22,7 @@ class Node {
   }
 
   get degree() {
-    let degree = 0;
-
-    if (this.left) {
-      degree++;
-    }
-
-    if (this.right) {
-      degree++;
-    }
-
-    return degree;
+    return this.children.length;
   }
 
   get left() {
