@@ -72,15 +72,7 @@ class Node {
 
       while (nodes > 0) {
         current = queue.shift();
-
-        if (current.left) {
-          queue.push(current.left);
-        }
-
-        if (current.right) {
-          queue.push(current.right);
-        }
-
+        queue.push(...current.children);
         nodes--;
       }
     }
