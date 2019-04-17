@@ -86,15 +86,15 @@ class Tree {
   }
 
   fullNodes() {
-    let full = 0;
+    const nodes = [];
 
     this.inOrder(x => {
       if (x.isFull()) {
-        full++;
+        nodes.push(x);
       }
     });
 
-    return full;
+    return nodes;
   }
 
   includes(value) {
