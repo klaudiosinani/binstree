@@ -32,8 +32,8 @@ declare namespace tree {
 
   export interface Instance<T> {
     readonly root: Node<T> | null;
-    height(): number;
     fullNodes(): number;
+    height(): number;
     includes(value: T): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     insert(...values: T[]): this;
@@ -48,6 +48,7 @@ declare namespace tree {
     max(): Node<T> | null;
     min(): Node<T> | null;
     outOrder(fn: UnaryCallback<Node<T>>): this;
+    partialNodes(): Node<T>[];
     postOrder(fn: UnaryCallback<Node<T>>): this;
     preOrder(fn: UnaryCallback<Node<T>>): this;
     remove(value: T): this;

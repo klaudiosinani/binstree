@@ -339,6 +339,18 @@ class Tree {
     return this;
   }
 
+  partialNodes() {
+    const nodes = [];
+
+    this.inOrder(x => {
+      if (x.isPartial()) {
+        nodes.push(x);
+      }
+    });
+
+    return nodes;
+  }
+
   postOrder(fn) {
     let last = null;
     const stack = [];
