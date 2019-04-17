@@ -52,7 +52,7 @@ declare namespace tree {
     partialNodes(): Node<T>[];
     postOrder(fn: UnaryCallback<Node<T>>): this;
     preOrder(fn: UnaryCallback<Node<T>>): this;
-    remove(value: T): this;
+    remove(key: number): this;
     search(value: T): Node<T> | null;
     size(): number;
     toArray(): T[];

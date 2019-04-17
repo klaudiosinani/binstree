@@ -46,14 +46,14 @@ class Tree {
     return min;
   }
 
-  _remove(value, node) {
-    if (value < node.value) {
-      node.left = this._remove(value, node.left);
+  _remove(key, node) {
+    if (key < node.key) {
+      node.left = this._remove(key, node.left);
       return node;
     }
 
-    if (value > node.value) {
-      node.right = this._remove(value, node.right);
+    if (key > node.key) {
+      node.right = this._remove(key, node.right);
       return node;
     }
 
@@ -70,8 +70,9 @@ class Tree {
     }
 
     const successor = this._min(node.right);
+    node._key = successor.key;
     node.value = successor.value;
-    node.right = this._remove(successor.value, node.right);
+    node.right = this._remove(successor.key, node.right);
     return node;
   }
 
@@ -397,11 +398,11 @@ class Tree {
     return this;
   }
 
-  remove(value) {
+  remove(key) {
     const {_root} = this;
 
     if (_root) {
-      this._root = this._remove(value, _root);
+      this._root = this._remove(key, _root);
     }
 
     return this;
