@@ -2,7 +2,7 @@ declare namespace node {
   type Degree = 0 | 1 | 2;
 
   export interface Constructor {
-    new <T = any>(value?: T): Instance<T>;
+    new <T = any>(key: number, value: T): Instance<T>;
   }
 
   export interface Instance<T> {
