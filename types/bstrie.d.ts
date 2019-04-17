@@ -55,7 +55,7 @@ declare namespace tree {
     remove(key: number): this;
     search(key: T): Node<T> | null;
     size(): number;
-    toArray(): T[];
+    toArray(): Node<T>[];
   }
 }
 

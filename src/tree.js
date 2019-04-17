@@ -430,7 +430,7 @@ class Tree {
 
   toArray() {
     const array = [];
-    this.inOrder(x => array.push(x.value));
+    this.inOrder(node => array.push(node));
     return array;
   }
 }
