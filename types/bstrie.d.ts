@@ -53,7 +53,7 @@ declare namespace tree {
     postOrder(fn: UnaryCallback<Node<T>>): this;
     preOrder(fn: UnaryCallback<Node<T>>): this;
     remove(key: number): this;
-    search(value: T): Node<T> | null;
+    search(key: T): Node<T> | null;
     size(): number;
     toArray(): T[];
   }

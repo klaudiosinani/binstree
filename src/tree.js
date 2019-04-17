@@ -408,15 +408,15 @@ class Tree {
     return this;
   }
 
-  search(value) {
+  search(key) {
     let {_root: current} = this;
 
     while (current) {
-      if (value === current.value) {
+      if (key === current.key) {
         return current;
       }
 
-      current = value < current.value ? current.left : current.right;
+      current = key < current.key ? current.left : current.right;
     }
 
     return current;
