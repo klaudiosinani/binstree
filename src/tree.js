@@ -12,11 +12,11 @@ class Tree {
 
   _insert(node, target) {
     while (target) {
-      if (node.value === target.value) {
+      if (node.key === target.key) {
         return;
       }
 
-      if (node.value < target.value) {
+      if (node.key < target.key) {
         if (!target.left) {
           target.left = node;
           return;
@@ -129,17 +129,16 @@ class Tree {
     return this;
   }
 
-  insert(...values) {
-    values.forEach(value => {
-      const {_root} = this;
-      const node = new Node(value);
+  insert(key, value) {
+    const {_root} = this;
+    const node = new Node(key, value);
 
-      if (_root) {
-        return this._insert(node, _root);
-      }
-
+    if (_root) {
+      this._insert(node, _root);
+    } else {
       this._root = node;
-    });
+    }
+
     return this;
   }
 
