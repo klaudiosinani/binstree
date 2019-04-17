@@ -144,15 +144,15 @@ class Tree {
   }
 
   internalNodes() {
-    let internals = 0;
+    const nodes = [];
 
     this.inOrder(x => {
       if (x.isInternal()) {
-        internals++;
+        nodes.push(x);
       }
     });
 
-    return internals;
+    return nodes;
   }
 
   isBalanced() {
