@@ -32,7 +32,7 @@ declare namespace tree {
 
   export interface Instance<T> {
     readonly root: Node<T> | null;
-    fullNodes(): number;
+    fullNodes(): Node<T>[];
     height(): number;
     includes(value: T): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
