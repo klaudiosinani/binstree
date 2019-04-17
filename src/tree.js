@@ -89,9 +89,9 @@ class Tree {
   fullNodes() {
     const nodes = [];
 
-    this.inOrder(x => {
-      if (x.isFull()) {
-        nodes.push(x);
+    this.inOrder(node => {
+      if (node.isFull()) {
+        nodes.push(node);
       }
     });
 
@@ -146,9 +146,9 @@ class Tree {
   internalNodes() {
     const nodes = [];
 
-    this.inOrder(x => {
-      if (x.isInternal()) {
-        nodes.push(x);
+    this.inOrder(node => {
+      if (node.isInternal()) {
+        nodes.push(node);
       }
     });
 
@@ -279,9 +279,9 @@ class Tree {
   leafNodes() {
     const nodes = [];
 
-    this.inOrder(x => {
-      if (x.isLeaf()) {
-        nodes.push(x);
+    this.inOrder(node => {
+      if (node.isLeaf()) {
+        nodes.push(node);
       }
     });
 
@@ -342,9 +342,9 @@ class Tree {
   partialNodes() {
     const nodes = [];
 
-    this.inOrder(x => {
-      if (x.isPartial()) {
-        nodes.push(x);
+    this.inOrder(node => {
+      if (node.isPartial()) {
+        nodes.push(node);
       }
     });
 
