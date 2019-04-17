@@ -43,7 +43,7 @@ declare namespace tree {
     isEmpty(): boolean;
     isFull(): boolean;
     isPerfect(): boolean;
-    leafNodes(): number;
+    leafNodes(): Node<T>[];
     levelOrder(fn: UnaryCallback<Node<T>>): this;
     max(): Node<T> | null;
     min(): Node<T> | null;
