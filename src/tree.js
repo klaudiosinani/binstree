@@ -98,15 +98,15 @@ class Tree {
     return nodes;
   }
 
-  includes(value) {
+  includes(key) {
     let {_root: current} = this;
 
     while (current) {
-      if (value === current.value) {
+      if (key === current.key) {
         return true;
       }
 
-      current = value < current.value ? current.left : current.right;
+      current = key < current.key ? current.left : current.right;
     }
 
     return false;

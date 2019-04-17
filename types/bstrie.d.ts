@@ -35,7 +35,7 @@ declare namespace tree {
     readonly root: Node<T> | null;
     fullNodes(): Node<T>[];
     height(): number;
-    includes(value: T): boolean;
+    includes(key: number): boolean;
     inOrder(fn: UnaryCallback<Node<T>>): this;
     insert(key: number, value: T): this;
     internalNodes(): Node<T>[];
