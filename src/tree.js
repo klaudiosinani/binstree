@@ -277,15 +277,15 @@ class Tree {
   }
 
   leafNodes() {
-    let leaves = 0;
+    const nodes = [];
 
     this.inOrder(x => {
       if (x.isLeaf()) {
-        leaves++;
+        nodes.push(x);
       }
     });
 
-    return leaves;
+    return nodes;
   }
 
   levelOrder(fn) {
