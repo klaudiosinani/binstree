@@ -26,6 +26,10 @@ class Node {
     return this.children.length;
   }
 
+  get key() {
+    return this._key;
+  }
+
   get left() {
     return this._left;
   }
