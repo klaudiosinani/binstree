@@ -55,6 +55,51 @@ A binary search tree is a rooted binary tree data structure, whose nodes store a
 
 ## Usage
 
+Bstrie exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
+
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/bstrie/tree/master/test) directory.
+
+```js
+'use strict';
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+//=> Tree { root: null }
+tree.insert(10, 'A');
+// => Tree { root: Node { left: null, right: null, key: 10, value: 'A' } }
+tree.root;
+//=> Node { left: null, right: null, key: 10, value: 'A' }
+tree.insert(5, 'B').insert(15, 'C').root;
+//=> Node { left: [Node], right: [Node], key: 10, value: 'A' }
+tree.root.left;
+//=> Node { left: null, right: null, key: 5, value: 'B' }
+tree.root.right;
+//=> Node { left: null, right: null, key: 15, value: 'C' }
+tree.insert(2, 'D').insert(7, 'E').insert(12, 'F').insert(20, 'G');
+tree.search(5);
+//=> Node { key: 5, value: 'B',
+//  left: Node { left: null, right: null, key: 2, value: 'D' },
+//  right: Node { left: null, right: null, key: 7, value: 'E' } }
+tree.search(15);
+//=> Node { key: 15, value: 'C',
+//  left: Node { left: null, right: null, key: 12, value: 'F' },
+//  right: Node { left: null, right: null, key: 20, value: 'G' } }
+tree.includes(12);
+//=> true
+tree.includes(100);
+//=> false
+tree.height();
+//=> 2
+tree.isBalanced();
+//=> true
+tree.remove(10).root;
+//=> Node { key: 12, value: 'F',
+//  left: Node { left: [Node], right: [Node], key: 5, value: 'B' },
+//  right: Node { left: null, right: [Node], key: 15, value: 'C' } }
+tree.isBalanced();
+//=> false
+```
+
 ## API
 
 ## Development
