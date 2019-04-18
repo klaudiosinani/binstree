@@ -61,7 +61,7 @@ Usage examples can be also found at the [`test`](https://github.com/klaussinani/
 
 ```js
 'use strict';
-const {Tree} = require('bstrie');
+const {Tree, Node} = require('bstrie');
 
 const tree = new Tree();
 //=> Tree { root: null }
@@ -69,6 +69,11 @@ tree.insert(10, 'A');
 // => Tree { root: Node { left: null, right: null, key: 10, value: 'A' } }
 tree.root;
 //=> Node { left: null, right: null, key: 10, value: 'A' }
+const node = new Node(10, 'A');
+tree.root.key ===  node.key;
+//=> true
+tree.root.value ===  node.value;
+//=> true
 tree.insert(5, 'B').insert(15, 'C').root;
 //=> Node { left: [Node], right: [Node], key: 10, value: 'A' }
 tree.root.left;
