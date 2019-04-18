@@ -27,6 +27,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/m
 
 - [Description](#description)
 - [Install](#install)
+- [In Depth](#in-depth)
 - [Usage](#usage)
 - [API](#api)
 - [Development](#development)
@@ -47,6 +48,10 @@ yarn add bstrie
 ```bash
 npm install bstrie
 ```
+
+## In Depth
+
+A binary search tree is a rooted binary tree data structure, whose nodes store a `key`, an associated `value`, and two distinguished `left` and `right` sub-trees. The tree satisfies the binary search property, thus the key in each node is greater than any key stored in the left sub-tree, and less than any key stored in the right sub-tree. As an imminent result of this principle, tree operations are greatly benefited, since each key comparison allows the operations to skip about half of the tree, so that each insertion, deletion or lookup takes time proportional to the logarithm of the number of nodes stored in the tree.
 
 ## Usage
 
