@@ -544,6 +544,242 @@ tree.isPerfect();
 //=> false
 ```
 
+Also available, along with the `Tree` exposed class, is the `Node` class, mainly useful for testing purposes, since it can be utilized to compare tree residing nodes. The class has a binary constructor method, with a `key` and a `value` parameter, corresponding to the key and value stored in the created instance, respectively.
+
+#### node.`key`
+
+- Return Type: `Number`
+
+The key corresponding to the node instance.
+
+```js
+const {Node} = require('bstrie');
+
+const node = new Node(10, 'A');
+// => { key:10, value: 'A', left: null, right: null }
+node.key;
+//=> 10
+```
+
+#### node.`value`
+
+- Return Type: `Any`
+
+The value that the node contains.
+
+```js
+const {Node} = require('doublie');
+
+const node = new Node(10, 'A');
+
+// => { key: 10, value: 'A', left: null, right: null }
+node.value;
+//=> 'A'
+node.value = 'B'
+// => { key: 10, value: 'B', left: null, right: null }
+```
+
+#### node.`left`
+
+- Return Type: `Node | null`
+
+The left sub-tree that the node points to.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root;
+// => { key: 10, value: 'A', left: null, right: null }
+tree.root.left;
+//=> null
+tree.insert(5, 'B').root;
+// => { key: 10, value: 'A', left: { key: 5, value: 'B', left: null, right: null } , right: null }
+tree.root.left;
+//=> { key: 5, value: 'B', left: null, right: null }
+```
+
+#### node.`right`
+
+- Return Type: `Node | null`
+
+The right sub-tree that the node points to.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root;
+// => { key: 10, value: 'A', left: null, right: null }
+tree.root.right;
+//=> null
+tree.insert(15, 'B').root;
+// => { key: 10, value: 'A', left: null , right: { key: 15, value: 'B', left: null, right: null } }
+tree.root.right;
+//=> { key: 15, value: 'B', left: null, right: null }
+```
+
+#### node.`children`
+
+- Return Type: `Array<Node>`
+
+Returns an array contacting the children of the instance, where the left child, if present, is the first element of the array, and the right child, if present, is the last element of the array.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.children;
+//=> []
+tree.insert(5, 'B').insert(15, 'C').root.children;
+// => [
+//  { key: 5, value: 'B', left: null , right: null }, 
+//  { key: 15, value: 'C', left: null, right: null }
+// ]
+```
+
+#### node.`degree`
+
+- Return Type: `Number`
+
+Returns the number of sub0trees that the node points to.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.degree;
+//=> 0
+tree.insert(5, 'B').root.degree;
+//=> 1
+tree.insert(15, 'C').root.degree;
+//=> 2
+```
+
+#### node.`height()`
+
+- Return Type: `Number`
+
+Returns the maximum distance of any leaf node from the node instance.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').insert(15, 'B').insert(25, 'C').insert(35, 'D');
+tree.root.height();
+//=> 3
+tree.root.right.height();
+//=> 2
+```
+
+#### node.`isFull()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isFull();
+//=> false
+tree.insert(5, 'B').insert(15, 'C').root.isFull();
+//=> true
+```
+
+#### node.`isInternal()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isInternal();
+//=> false
+tree.insert(5, 'B').root.isInternal();
+//=> true
+```
+
+#### node.`isLeaf()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isLeaf();
+//=> true
+tree.insert(5, 'B').root.isLeaf();
+//=> false
+```
+
+#### node.`isLeftPartial()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isLeftPartial();
+//=> false
+tree.insert(5, 'B').root.isLeftPartial();
+//=> true
+```
+
+#### node.`isPartial()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isPartial();
+//=> false
+tree.insert(15, 'B').root.isPartial();
+//=> true
+```
+
+#### node.`isRightPartial()`
+
+- Return Type: `Boolean`
+
+The method determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
+
+```js
+const {Tree} = require('doublie');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').root.isRightPartial();
+//=> false
+tree.insert(15, 'B').root.isRightPartial();
+//=> true
+```
+
 ## Development
 
 For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/master/contributing.md).
