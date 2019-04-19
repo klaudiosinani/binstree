@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "ava": "1.4.1",
+    "coveralls": "^3.0.3",
     "xo": "^0.24.0"
   },
   "xo": {
