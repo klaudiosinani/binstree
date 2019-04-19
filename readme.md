@@ -371,23 +371,21 @@ tree.levelOrder(node => console.log(node.key));
 // 15
 ```
 
-#### tree.`toArray()`
+#### tree.`clear()`
 
-- Return Type: `Array<Node>`
+- Return Type: `Tree`
 
-Applies in-order traversal to the tree and stores each traversed node in an array.
-The array is returned at the end of the traversal.
+Mutates the tree instance by removing all residing nodes and returns it completely empty.
 
 ```js
-tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(3, 'D').insert(20, 'F');
-tree.toArray();
-//=> [ 
-//  Node { left: null, right: null, key: 3, value: 'D' },
-//  Node { left: [Node], right: null, key: 5, value: 'B' },
-//  Node { left: [Node], right: [Node], key: 10, value: 'A' },
-//  Node { left: null, right: [Node], key: 15, value: 'C' },
-//  Node { left: null, right: null, key: 20, value: 'F' } 
-// ]
+tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
+//=> Tree { root: Node { left: [Node], right: [Node], key: 3, value: 'A' } }
+tree.size();
+//=> 3
+tree.clear();
+//=> Tree { root: null } }
+tree.size();
+//=> 0
 ```
 
 #### tree.`toArray()`
