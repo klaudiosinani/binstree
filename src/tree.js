@@ -76,6 +76,11 @@ class Tree {
     return node;
   }
 
+  clear() {
+    this._root = null;
+    return this;
+  }
+
   height() {
     const {_root} = this;
 
