@@ -23,7 +23,9 @@
   ],
   "scripts": {
     "lint": "xo",
-    "test": "npm run lint"
+    "test:ts": "tsc --noEmit -p test/types",
+    "test:js": "npm run lint && nyc ava",
+    "test": "npm run test:ts && npm run test:js"
   },
   "devDependencies": {
     "ava": "1.4.1",
