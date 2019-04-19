@@ -26,6 +26,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
+    "ava": "1.4.1",
     "xo": "^0.24.0"
   },
   "xo": {
