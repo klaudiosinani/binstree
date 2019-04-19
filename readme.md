@@ -107,8 +107,6 @@ tree.isBalanced();
 
 ## API
 
-The following described `tree` and `node` variable names are used to depict any instance created through the bstrie exported `Tree` and `Node` class constructors.
-
 #### tree.`insert(key, value)`
 
 - Return Type: `Tree`
@@ -129,6 +127,10 @@ Each node has its own unique key value.
 Can be any value that will stored in the created node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A');
 // => Tree { root: Node { key: 10, value: 'A', left: null, right: null } }
 ```
@@ -140,6 +142,10 @@ tree.insert(10, 'A');
 Return the root node of the tree. If the tree is empty, then it will return `null`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A');
 // => Tree { root: Node { key: 10, value: 'A', left: null, right: null } }
 tree.root;
@@ -153,6 +159,10 @@ tree.root;
 Checks whether or not the tree is empty.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A');
 tree.isEmpty();
 // => false
@@ -171,6 +181,10 @@ Mutates the tree by removing the node corresponding to the `key` argument.
 Can be any number that corresponds to the of an existing node. 
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A');
 tree.remove(10);
 //=> Tree { root: null }
@@ -189,6 +203,10 @@ The method determines whether a tree, includes a node with a certain key, return
 Node key to search for.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B');
 tree.includes(10);
 // => true
@@ -211,6 +229,10 @@ The method determines whether a tree, includes a node with a certain key, return
 Node key to search for.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B');
 tree.search(10);
 // => Node { key: 10, value: 'A', left: [Node], right: null }
@@ -227,6 +249,10 @@ tree.search(5);
 Returns the left-most node in the tree, thus the node corresponding to the minimum `key`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(0, 'C');
 tree.min();
 // => Node { key: 0, value: 'C', left: null, right: null }
@@ -239,6 +265,10 @@ tree.min();
 Returns the right-most node in the tree, thus the node corresponding to the maximum `key`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(15, 'B').insert(25, 'C');
 tree.max();
 // => Node { key: 25, value: 'C', left: null, right: null }
@@ -251,6 +281,10 @@ tree.max();
 Returns the total number of nodes residing in the tree.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(15, 'B').insert(25, 'C');
 tree.size();
 // => 3
@@ -263,6 +297,10 @@ tree.size();
 Returns the maximum distance of any leaf node from the root. If the tree is empty `-1` is returned.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A');
 tree.height();
 // => 0
@@ -284,6 +322,10 @@ Applies in-order traversal (depth-first traversal - LNR) to the tree and execute
 Function to execute on each node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.inOrder(node => console.log(node.key));
 // => 5
@@ -304,6 +346,10 @@ Applies pre-order traversal (depth-first traversal - NLR) to the tree and execut
 Function to execute on each node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.preOrder(node => console.log(node.key));
 // => 10
@@ -324,6 +370,10 @@ Applies post-order traversal (depth-first traversal - LRN) to the tree and execu
 Function to execute on each node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.postOrder(node => console.log(node.key));
 // => 5
@@ -344,6 +394,10 @@ Applies out-order traversal (depth-first traversal - RNL) to the tree and execut
 Function to execute on each node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.outOrder(node => console.log(node.key));
 // => 15
@@ -364,6 +418,10 @@ Applies level-order traversal (breadth-first traversal) to the tree and executes
 Function to execute on each node.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.levelOrder(node => console.log(node.key));
 // => 10
@@ -378,6 +436,10 @@ tree.levelOrder(node => console.log(node.key));
 Mutates the tree instance by removing all residing nodes and returns it completely empty.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 //=> Tree { root: Node { left: [Node], right: [Node], key: 3, value: 'A' } }
 tree.size();
@@ -396,6 +458,10 @@ Applies in-order traversal to the tree and stores each traversed node in an arra
 The array is returned at the end of the traversal.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(3, 'D').insert(20, 'F');
 tree.toArray();
 //=> [ 
@@ -415,6 +481,10 @@ Applies in-order traversal to the tree and stores each traversed leaf node (node
 The array is returned at the end of the traversal.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.leafNodes();
 //=> [ 
@@ -431,6 +501,10 @@ Applies in-order traversal to the tree and stores each traversed full node (node
 The array is returned at the end of the traversal.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.fullNodes();
 //=> [ 
@@ -446,6 +520,10 @@ Applies in-order traversal to the tree and stores each partial node (node with o
 The array is returned at the end of the traversal.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(20, 'D').insert(3, 'E');
 tree.fullNodes();
 //=> [ 
@@ -462,6 +540,10 @@ Applies in-order traversal to the tree and stores each partial node (node wit on
 The array is returned at the end of the traversal.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(20, 'D').insert(3, 'E');
 tree.fullNodes();
 //=> [ 
@@ -477,10 +559,13 @@ tree.fullNodes();
 The method returns `true` if the tree is height-balanced, which implies that its left subtree is balanced, its right subtree is balanced and the difference between heights of left subtree and right subtree is not more than 1. In any other case, the method returns `false`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.isBalanced();
 //=> true
-
 tree.insert(20, 'D').insert(30, 'E');
 tree.isBalanced();
 //=> false
@@ -493,14 +578,16 @@ tree.isBalanced();
 The method returns `true` if the tree is a complete binary search tree, which implies that every level, except possibly the last, is completely filled, and all nodes are as far left as possible. In any other case, the method returns false.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.isComplete();
 //=> true
-
 tree.insert(3, 'D');
 tree.isComplete();
 //=> true
-
 tree.insert(20, 'E');
 tree.isComplete();
 //=> false
@@ -513,10 +600,13 @@ tree.isComplete();
 The method returns `true` if the tree is empty or if all residing nodes are either leaf nodes or full nodes. In any other case (node degree equal to 1) the method returns `false`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.isFull();
 //=> true
-
 tree.insert(8, 'D');
 tree.isFull();
 //=> false
@@ -529,14 +619,16 @@ tree.isFull();
 The method returns `true` if the tree is empty or if all residing internal nodes are full nodes (node degree equal to 2) and all leaf nodes are at the same height level. In any other case (node degree equal to 1 or leaf and full nodes are found on the same height level) the method returns `false`.
 
 ```js
+const {Tree} = require('bstrie');
+
+const tree = new Tree();
+
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C');
 tree.isPerfect();
 //=> true
-
 tree.insert(3, 'D').insert(7, 'E').insert(12, 'F').insert(20, 'G');
 tree.isPerfect();
 //=> true
-
 tree.insert(1, 'H');
 tree.isPerfect();
 //=> false
@@ -566,7 +658,7 @@ node.key;
 The value that the node contains.
 
 ```js
-const {Node} = require('doublie');
+const {Node} = require('bstrie');
 
 const node = new Node(10, 'A');
 
@@ -584,7 +676,7 @@ node.value = 'B'
 The left sub-tree that the node points to.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -605,7 +697,7 @@ tree.root.left;
 The right sub-tree that the node points to.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -626,7 +718,7 @@ tree.root.right;
 Returns an array contacting the children of the instance, where the left child, if present, is the first element of the array, and the right child, if present, is the last element of the array.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -646,7 +738,7 @@ tree.insert(5, 'B').insert(15, 'C').root.children;
 Returns the number of sub0trees that the node points to.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -665,7 +757,7 @@ tree.insert(15, 'C').root.degree;
 Returns the maximum distance of any leaf node from the node instance.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -683,7 +775,7 @@ tree.root.right.height();
 The method determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -700,7 +792,7 @@ tree.insert(5, 'B').insert(15, 'C').root.isFull();
 The method determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -717,7 +809,7 @@ tree.insert(5, 'B').root.isInternal();
 The method determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -734,7 +826,7 @@ tree.insert(5, 'B').root.isLeaf();
 The method determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -751,7 +843,7 @@ tree.insert(5, 'B').root.isLeftPartial();
 The method determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
@@ -768,7 +860,7 @@ tree.insert(15, 'B').root.isPartial();
 The method determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('doublie');
+const {Tree} = require('bstrie');
 
 const tree = new Tree();
 
