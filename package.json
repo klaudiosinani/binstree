@@ -1,6 +1,6 @@
 {
   "name": "bstrie",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "🌲 Binary search trees for ES6",
   "license": "MIT",
   "repository": "klaussinani/bstrie",
