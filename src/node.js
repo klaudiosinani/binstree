@@ -35,6 +35,10 @@ class Node {
   }
 
   set left(node) {
+    if (node.key >= this.key) {
+      throw new Error('Left child node key must be less than the parent node key');
+    }
+
     this._left = node;
   }
 
