@@ -74,10 +74,10 @@ tree.root;
 
 const node = new Node(10, 'A');
 
-tree.root.key ===  node.key;
+tree.root.key === node.key;
 //=> true
 
-tree.root.value ===  node.value;
+tree.root.value === node.value;
 //=> true
 
 tree.insert(5, 'B').insert(15, 'C').root;
@@ -651,7 +651,7 @@ tree.isPerfect();
 //=> false
 ```
 
-Also available, along with the `Tree` exposed class, is the `Node` class, mainly useful for testing purposes, since it can be utilized to compare tree residing nodes. The class has a binary constructor method, with a `key` and a `value` parameter, corresponding to the key and value stored in the created instance, respectively.
+Also available, along with the `Tree` exposed class, is the `Node` class, mainly useful for testing purposes, since it can be utilized to compare tree nodes. The class has a binary constructor method, with a `key` and a `value` parameter, corresponding to the key and the value stored in the created instance, respectively.
 
 #### node.`key`
 
