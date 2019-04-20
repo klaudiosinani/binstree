@@ -51,7 +51,7 @@ npm install bstrie
 
 ## In Depth
 
-A binary search tree is a rooted binary tree data structure, whose nodes store a `key`, an associated `value`, and two distinguished `left` and `right` sub-trees. The tree satisfies the binary search property, thus the key in each node is greater than any key stored in the left sub-tree, and less than any key stored in the right sub-tree. As an imminent result of this principle, tree operations are greatly benefited, since each key comparison allows the operations to skip about half of the tree, so that each insertion, deletion or lookup takes time proportional to the logarithm of the number of nodes stored in the tree.
+A binary search tree is a rooted binary tree data structure, whose nodes contain a unique `key` & an associated `value`, and point to two distinguished `left` and `right` sub-trees. The tree satisfies the binary search property, thus the key in each node is greater than any key stored in the left sub-tree, and less than any key stored in the right sub-tree. As an imminent result of this principle, tree operations are greatly benefited, since each key comparison allows the operations to skip about half of the tree, so that each insertion, deletion or lookup takes time proportional to the logarithm of the number of nodes stored in the tree.
 
 ## Usage
 
@@ -134,8 +134,8 @@ Mutates the tree by inserting a new node at the appropriate location.
 
 - Type: `Number`
 
-Can be any number that will correspond to the key of the created node. 
-Each node has its own unique key value.
+Can be any number that will correspond to the `key` of the created node. 
+Each node has its own unique `key`.
 
 ##### **`value`**
 
@@ -156,7 +156,8 @@ tree.insert(10, 'A');
 
 - Return Type: `Node | null`
 
-Return the root node of the tree. If the tree is empty, then it will return `null`.
+Returns the root node of the tree.
+If the tree is empty `null` is returned.
 
 ```js
 const {Tree} = require('bstrie');
@@ -173,7 +174,7 @@ tree.root;
 
 - Return Type: `Boolean`
 
-Checks whether or not the tree is empty.
+Determines whether the tree is empty, returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -195,7 +196,7 @@ Mutates the tree by removing the node corresponding to the `key` argument.
 
 - Type: `Number`
 
-Can be any number that corresponds to the of an existing node. 
+Can be any number that corresponds to the `key` of an existing node. 
 
 ```js
 const {Tree} = require('bstrie');
@@ -211,13 +212,13 @@ tree.remove(10);
 
 - Return Type: `Boolean`
 
-The method determines whether a tree, includes a node with a certain key, returning `true` or `false` as appropriate.
+Determines whether the tree includes a node with a certain `key`, returning `true` or `false` as appropriate.
 
 ##### **`key`**
 
 - Type: `Number`
 
-Node key to search for.
+Node `key` to search for.
 
 ```js
 const {Tree} = require('bstrie');
@@ -237,13 +238,13 @@ tree.includes(5);
 
 - Return Type: `Node | null`
 
-The method determines whether a tree, includes a node with a certain key, returning the targeted node or `null` as appropriate.
+Determines whether the tree includes a node with a certain `key`, returning the targeted node or `null` as appropriate.
 
 ##### **`key`**
 
 - Type: `Number`
 
-Node key to search for.
+Node `key` to search for.
 
 ```js
 const {Tree} = require('bstrie');
@@ -311,7 +312,8 @@ tree.size();
 
 - Return Type: `Number`
 
-Returns the maximum distance of any leaf node from the root. If the tree is empty `-1` is returned.
+Returns the maximum distance of any leaf node from the root. 
+If the tree is empty `-1` is returned.
 
 ```js
 const {Tree} = require('bstrie');
@@ -450,7 +452,7 @@ tree.levelOrder(node => console.log(node.key));
 
 - Return Type: `Tree`
 
-Mutates the tree instance by removing all residing nodes and returns it completely empty.
+Mutates the tree by removing all residing nodes and returns empty.
 
 ```js
 const {Tree} = require('bstrie');
@@ -573,7 +575,8 @@ tree.fullNodes();
 
 - Return Type: `Boolean`
 
-The method returns `true` if the tree is height-balanced, which implies that its left subtree is balanced, its right subtree is balanced and the difference between heights of left subtree and right subtree is not more than 1. In any other case, the method returns `false`.
+Returns `true` if the tree is height-balanced, which implies that its left sub-tree is balanced, its right sub-tree is balanced and the difference between heights of left sub-tree and right sub-tree is not greater than 1.
+In any other case, the method returns `false`.
 
 ```js
 const {Tree} = require('bstrie');
@@ -592,7 +595,8 @@ tree.isBalanced();
 
 - Return Type: `Boolean`
 
-The method returns `true` if the tree is a complete binary search tree, which implies that every level, except possibly the last, is completely filled, and all nodes are as far left as possible. In any other case, the method returns false.
+The method returns `true` if the tree is a complete binary search tree, which implies that every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
+In any other case, the method returns false.
 
 ```js
 const {Tree} = require('bstrie');
@@ -614,7 +618,8 @@ tree.isComplete();
 
 - Return Type: `Boolean`
 
-The method returns `true` if the tree is empty or if all residing nodes are either leaf nodes or full nodes. In any other case (node degree equal to 1) the method returns `false`.
+The method returns `true` if all the nodes residing in the tree are either leaf nodes or full nodes.
+In any other case (node degree equal to 1) the method returns `false`.
 
 ```js
 const {Tree} = require('bstrie');
@@ -633,7 +638,7 @@ tree.isFull();
 
 - Return Type: `Boolean`
 
-The method returns `true` if the tree is empty or if all residing internal nodes are full nodes (node degree equal to 2) and all leaf nodes are at the same height level. In any other case (node degree equal to 1 or leaf and full nodes are found on the same height level) the method returns `false`.
+The method returns `true` if all the internal nodes residing in the tree are full nodes (node degree equal to 2) and all leaf nodes are at the same height level. In any other case (node degree equal to 1 or leaf and full nodes are found on the same height level) the method returns `false`.
 
 ```js
 const {Tree} = require('bstrie');
@@ -657,7 +662,7 @@ Also available, along with the `Tree` exposed class, is the `Node` class, mainly
 
 - Return Type: `Number`
 
-The key corresponding to the node instance.
+The `key` corresponding to the node instance.
 
 ```js
 const {Node} = require('bstrie');
@@ -752,7 +757,7 @@ tree.insert(5, 'B').insert(15, 'C').root.children;
 
 - Return Type: `Number`
 
-Returns the number of sub0trees that the node points to.
+Returns the number of sub-trees that the node points to.
 
 ```js
 const {Tree} = require('bstrie');
@@ -789,7 +794,7 @@ tree.root.right.height();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
+Determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -806,7 +811,7 @@ tree.insert(5, 'B').insert(15, 'C').root.isFull();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
+Determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -823,7 +828,7 @@ tree.insert(5, 'B').root.isInternal();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
+Determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -840,7 +845,7 @@ tree.insert(5, 'B').root.isLeaf();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
+Determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -857,7 +862,7 @@ tree.insert(5, 'B').root.isLeftPartial();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
+Determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
@@ -874,7 +879,7 @@ tree.insert(15, 'B').root.isPartial();
 
 - Return Type: `Boolean`
 
-The method determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
+Determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
 
 ```js
 const {Tree} = require('bstrie');
