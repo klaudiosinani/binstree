@@ -47,7 +47,7 @@ class Node {
   }
 
   set right(node) {
-    if (node.key <= this.key) {
+    if (node && node.key <= this.key) {
       throw new Error('Right child node key must be greater than the parent node key');
     }
 
