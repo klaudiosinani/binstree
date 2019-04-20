@@ -76,7 +76,7 @@ class Node {
   }
 
   isFull() {
-    return this.left && this.right;
+    return this.left !== null && this.right !== null;
   }
 
   isInternal() {
