@@ -54,7 +54,7 @@ declare namespace tree {
     postOrder(fn: UnaryCallback<Node<T>>): this;
     preOrder(fn: UnaryCallback<Node<T>>): this;
     remove(key: number): this;
-    search(key: T): Node<T> | null;
+    search(key: number): Node<T> | null;
     size(): number;
     toArray(): Node<T>[];
   }
