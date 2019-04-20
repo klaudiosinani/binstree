@@ -13,6 +13,11 @@
     "node": ">=6"
   },
   "types": "types/bstrie.d.ts",
+  "files": [
+    "src",
+    "types",
+    "index.js"
+  ],
   "keywords": [
     "binary",
     "search",
