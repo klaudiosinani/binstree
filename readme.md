@@ -492,6 +492,23 @@ tree.toArray();
 // ]
 ```
 
+#### tree.`toPairs()`
+
+- Return Type: `Array<[Number, Any]>`
+
+Applies in-order traversal to the tree and for each traversed node stores in an `n`-tuple, where `n` the size of the tree, an ordered-pair/2-tuple, where the first element is a `number` corresponding to the `key` of the traversed node, and the last one is a value of type `any`, corresponding to the `value` stored in the traversed node.
+The `n`-tuple is returned at the end of the traversal.
+
+```js
+const {Tree} = require('binstree');
+
+const tree = new Tree();
+
+tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(3, 'D').insert(20, 'F');
+tree.toPairs();
+//=> [ [3, 'D'], [5, 'B'], [10, 'A'], [15, 'C'], [20, 'F'] ]
+```
+
 #### tree.`leafNodes()`
 
 - Return Type: `Array<Node>`
