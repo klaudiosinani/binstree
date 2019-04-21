@@ -58,6 +58,7 @@ declare namespace tree {
     search(key: number): Node<T> | null;
     size(): number;
     toArray(): Node<T>[];
+    toPairs(): [number, T][];
   }
 }
 

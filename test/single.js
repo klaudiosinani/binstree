@@ -146,3 +146,10 @@ test('toArray', t => {
   t.deepEqual(tree.toArray(), [tree.root]);
   t.deepEqual(tree.toArray(), [node]);
 });
+
+test('toPairs', t => {
+  const node = new Node(10, 'A');
+  t.deepEqual(tree.toPairs(), [[10, 'A']]);
+  t.deepEqual(tree.toPairs(), [node.toPair()]);
+  t.deepEqual(tree.toPairs(), [tree.root.toPair()]);
+});
