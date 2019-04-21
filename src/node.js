@@ -106,6 +106,10 @@ class Node {
   isRightPartial() {
     return !this.left && this.right !== null;
   }
+
+  toPair() {
+    return [this.key, this.value];
+  }
 }
 
 module.exports = Node;
