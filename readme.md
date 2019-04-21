@@ -1,5 +1,5 @@
 <h1 align="center">
-  Bstrie
+  Binstree
 </h1>
 
 <h4 align="center">
@@ -7,11 +7,11 @@
 </h4>
 
 <p align="center">
-  <a href="https://travis-ci.com/klaussinani/bstrie">
-    <img alt="Build Status" src="https://travis-ci.com/klaussinani/bstrie.svg?branch=master">
+  <a href="https://travis-ci.com/klaussinani/binstree">
+    <img alt="Build Status" src="https://travis-ci.com/klaussinani/binstree.svg?branch=master">
   </a>
-  <a href='https://coveralls.io/github/klaussinani/bstrie?branch=master'>
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaussinani/bstrie/badge.svg?branch=master">
+  <a href='https://coveralls.io/github/klaussinani/binstree?branch=master'>
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaussinani/binstree/badge.svg?branch=master">
   </a>
 </p>
 
@@ -21,7 +21,7 @@ ES6 implementation of the binary search tree data structure with TypeScript supp
 
 Come over to [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
 
-Visit the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+Visit the [contributing guidelines](https://github.com/klaussinani/binstree/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 ## Contents
 
@@ -40,13 +40,13 @@ Visit the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/m
 ### Yarn
 
 ```bash
-yarn add bstrie
+yarn add binstree
 ```
 
 ### NPM
 
 ```bash
-npm install bstrie
+npm install binstree
 ```
 
 ## In Depth
@@ -55,13 +55,13 @@ A binary search tree is a rooted binary tree data structure, whose nodes contain
 
 ## Usage
 
-Bstrie exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
+Binstree exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
 
-Usage examples can be also found at the [`test`](https://github.com/klaussinani/bstrie/tree/master/test) directory.
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/binstree/tree/master/test) directory.
 
 ```js
 'use strict';
-const {Tree, Node} = require('bstrie');
+const {Tree, Node} = require('binstree');
 
 const tree = new Tree();
 //=> Tree { root: null }
@@ -144,7 +144,7 @@ Each node has its own unique `key`.
 Can be any value that will stored in the created node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -160,7 +160,7 @@ Returns the root node of the tree.
 If the tree is empty `null` is returned.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -177,7 +177,7 @@ tree.root;
 Determines whether the tree is empty, returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -199,7 +199,7 @@ Mutates the tree by removing the node corresponding to the `key` argument.
 Can be any number that corresponds to the `key` of an existing node. 
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -221,7 +221,7 @@ Determines whether the tree includes a node with a certain `key`, returning `tru
 Node `key` to search for.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -247,7 +247,7 @@ Determines whether the tree includes a node with a certain `key`, returning the 
 Node `key` to search for.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -267,7 +267,7 @@ tree.search(5);
 Returns the left-most node in the tree, thus the node corresponding to the minimum `key`.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -283,7 +283,7 @@ tree.min();
 Returns the right-most node in the tree, thus the node corresponding to the maximum `key`.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -299,7 +299,7 @@ tree.max();
 Returns the total number of nodes residing in the tree.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -316,7 +316,7 @@ Returns the maximum distance of any leaf node from the root.
 If the tree is empty `-1` is returned.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -341,7 +341,7 @@ Applies in-order traversal (depth-first traversal - LNR) to the tree and execute
 Function to execute on each node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -365,7 +365,7 @@ Applies pre-order traversal (depth-first traversal - NLR) to the tree and execut
 Function to execute on each node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -389,7 +389,7 @@ Applies post-order traversal (depth-first traversal - LRN) to the tree and execu
 Function to execute on each node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -413,7 +413,7 @@ Applies out-order traversal (depth-first traversal - RNL) to the tree and execut
 Function to execute on each node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -437,7 +437,7 @@ Applies level-order traversal (breadth-first traversal) to the tree and executes
 Function to execute on each node.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -455,7 +455,7 @@ tree.levelOrder(node => console.log(node.key));
 Mutates the tree by removing all residing nodes and returns it empty.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -477,7 +477,7 @@ Applies in-order traversal to the tree and stores each traversed node in an arra
 The array is returned at the end of the traversal.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -500,7 +500,7 @@ Applies in-order traversal to the tree and stores each traversed leaf node (node
 The array is returned at the end of the traversal.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -520,7 +520,7 @@ Applies in-order traversal to the tree and stores each traversed full node (node
 The array is returned at the end of the traversal.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -539,7 +539,7 @@ Applies in-order traversal to the tree and stores each partial node (node with o
 The array is returned at the end of the traversal.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -559,7 +559,7 @@ Returns `true` if the tree is height-balanced, which implies that its left sub-t
 In any other case, the method returns `false`.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -579,7 +579,7 @@ The method returns `true` if the tree is a complete binary search tree, which im
 In any other case, the method returns false.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -602,7 +602,7 @@ The method returns `true` if all the nodes residing in the tree are either leaf 
 In any other case (node degree equal to 1) the method returns `false`.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -621,7 +621,7 @@ tree.isFull();
 The method returns `true` if all the internal nodes residing in the tree are full nodes (node degree equal to 2) and all leaf nodes are at the same height level. In any other case (node degree equal to 1 or leaf and full nodes are found on the same height level) the method returns `false`.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -645,7 +645,7 @@ Also available, along with the `Tree` exposed class, is the `Node` class, mainly
 The `key` corresponding to the node instance.
 
 ```js
-const {Node} = require('bstrie');
+const {Node} = require('binstree');
 
 const node = new Node(10, 'A');
 // => { key:10, value: 'A', left: null, right: null }
@@ -660,7 +660,7 @@ node.key;
 The value that the node contains.
 
 ```js
-const {Node} = require('bstrie');
+const {Node} = require('binstree');
 
 const node = new Node(10, 'A');
 
@@ -678,7 +678,7 @@ node.value = 'B'
 The left sub-tree that the node points to.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -699,7 +699,7 @@ tree.root.left;
 The right sub-tree that the node points to.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -720,7 +720,7 @@ tree.root.right;
 Returns an array contacting the children of the instance, where the left child, if present, is the first element of the array, and the right child, if present, is the last element of the array.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -740,7 +740,7 @@ tree.insert(5, 'B').insert(15, 'C').root.children;
 Returns the number of sub-trees that the node points to.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -759,7 +759,7 @@ tree.insert(15, 'C').root.degree;
 Returns the maximum distance of any leaf node from the node instance.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -777,7 +777,7 @@ tree.root.right.height();
 Determines whether a node is a full node (has two non-null children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -794,7 +794,7 @@ tree.insert(5, 'B').insert(15, 'C').root.isFull();
 Determines whether a node is an internal node (has at least one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -811,7 +811,7 @@ tree.insert(5, 'B').root.isInternal();
 Determines whether a node is a leaf node (has no children), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -828,7 +828,7 @@ tree.insert(5, 'B').root.isLeaf();
 Determines whether a node is a left partial node (has ony one left non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -845,7 +845,7 @@ tree.insert(5, 'B').root.isLeftPartial();
 Determines whether a node is a partial node (has ony one non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -862,7 +862,7 @@ tree.insert(15, 'B').root.isPartial();
 Determines whether a node is a right partial node (has ony one right non-null child), returning `true` or `false` as appropriate.
 
 ```js
-const {Tree} = require('bstrie');
+const {Tree} = require('binstree');
 
 const tree = new Tree();
 
@@ -879,7 +879,7 @@ tree.insert(15, 'B').root.isRightPartial();
 Returns an ordered-pair/2-tuple, where the first element is a number corresponding to the `key` of the node, and the last one is a value, that can be of any type, corresponding to the `value` stored in the node.
 
 ```js
-const {Node, Tree} = require('bstrie');
+const {Node, Tree} = require('binstree');
 
 const tree = new Tree();
 const node = new Node(5, 'B');
@@ -892,10 +892,10 @@ tree.insert(10, 'A').root.toPair();
 
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/binstree/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
-- Navigate to your local fork: `cd bstrie`
+- Navigate to your local fork: `cd binstree`
 - Install the project dependencies: `npm install` or `yarn install`
 - Lint the code and run the tests: `npm test` or `yarn test`
 
@@ -910,4 +910,4 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## License
 
-[MIT](https://github.com/klaussinani/bstrie/blob/master/license.md)
+[MIT](https://github.com/klaussinani/binstree/blob/master/license.md)
