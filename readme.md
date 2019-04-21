@@ -452,7 +452,7 @@ tree.levelOrder(node => console.log(node.key));
 
 - Return Type: `Tree`
 
-Mutates the tree by removing all residing nodes and returns empty.
+Mutates the tree by removing all residing nodes and returns it empty.
 
 ```js
 const {Tree} = require('bstrie');
@@ -544,27 +544,7 @@ const {Tree} = require('bstrie');
 const tree = new Tree();
 
 tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(20, 'D').insert(3, 'E');
-tree.fullNodes();
-//=> [ 
-//  Node { left: [Node], right: null, key: 5, value: 'B' },
-//  Node { left: null, right: [Node], key: 15, value: 'C' }
-// ]
-```
-
-#### tree.`partialNodes()`
-
-- Return Type: `Array<Node>`
-
-Applies in-order traversal to the tree and stores each partial node (node wit one non-null child) in an array.
-The array is returned at the end of the traversal.
-
-```js
-const {Tree} = require('bstrie');
-
-const tree = new Tree();
-
-tree.insert(10, 'A').insert(5, 'B').insert(15, 'C').insert(20, 'D').insert(3, 'E');
-tree.fullNodes();
+tree.partialNodes();
 //=> [ 
 //  Node { left: [Node], right: null, key: 5, value: 'B' },
 //  Node { left: null, right: [Node], key: 15, value: 'C' }
