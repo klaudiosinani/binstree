@@ -109,3 +109,7 @@ test('size', t => {
 test('toArray', t => {
   t.deepEqual(tree.toArray(), []);
 });
+
+test('toPairs', t => {
+  t.deepEqual(tree.toPairs(), []);
+});

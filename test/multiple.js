@@ -202,3 +202,7 @@ test('toArray', t => {
   const array = tree.toArray();
   t.deepEqual(array.map(x => [x.key, x.value]), [[3, 'D'], [5, 'B'], [7, 'E'], [10, 'A'], [12, 'F'], [15, 'C'], [17, 'G']]);
 });
+
+test('toPairs', t => {
+  t.deepEqual(tree.toPairs(), [[3, 'D'], [5, 'B'], [7, 'E'], [10, 'A'], [12, 'F'], [15, 'C'], [17, 'G']]);
+});

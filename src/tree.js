@@ -438,6 +438,12 @@ class Tree {
     this.inOrder(node => array.push(node));
     return array;
   }
+
+  toPairs() {
+    const array = [];
+    this.inOrder(node => array.push(node.toPair()));
+    return array;
+  }
 }
 
 module.exports = Tree;
