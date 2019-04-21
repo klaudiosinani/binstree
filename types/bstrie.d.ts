@@ -61,14 +61,14 @@ declare namespace tree {
   }
 }
 
-declare namespace bstrie {
+declare namespace binstree {
   export interface Node<T = any> extends node.Instance<T> {}
   export interface Tree<T = any> extends tree.Instance<T> {}
 }
 
-declare const bstrie: {
+declare const binstree: {
   Node: node.Constructor;
   Tree: tree.Constructor;
 };
 
-export = bstrie;
+export = binstree;
