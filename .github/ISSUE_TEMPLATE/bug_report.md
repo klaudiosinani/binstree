@@ -18,7 +18,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Technical Info (please complete the following information)**
  - OS:
- - Bstrie Version:
+ - Binstree Version:
  - Node.js Version:
 
 **Additional context**
