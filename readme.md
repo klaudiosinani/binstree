@@ -872,6 +872,24 @@ tree.insert(15, 'B').root.isRightPartial();
 //=> true
 ```
 
+#### node.`toPair()`
+
+- Return Type: `[Number, Any]`
+
+Returns an ordered-pair/2-tuple, where the first element is a number corresponding to the `key` of the node, and the last one is a value, that can be of any type, corresponding to the `value` stored in the node.
+
+```js
+const {Node, Tree} = require('bstrie');
+
+const tree = new Tree();
+const node = new Node(5, 'B');
+
+node.toPair();
+//=> [5, 'B']
+tree.insert(10, 'A').root.toPair();
+//=> [10, 'A']
+```
+
 ## Development
 
 For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/bstrie/blob/master/contributing.md).
