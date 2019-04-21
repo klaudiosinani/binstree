@@ -139,3 +139,8 @@ test('isRightPartial', t => {
   node.left = left;
   t.false(node.isRightPartial());
 });
+
+test('toPair', t => {
+  const node = new Node(10, 'A');
+  t.deepEqual(node.toPair(), [10, 'A']);
+});
