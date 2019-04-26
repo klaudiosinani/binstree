@@ -24,7 +24,8 @@
     "tree",
     "es6",
     "data",
-    "structure"
+    "structure",
+    "typescript"
   ],
   "scripts": {
     "lint": "xo",
