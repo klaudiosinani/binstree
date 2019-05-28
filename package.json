@@ -1,7 +1,7 @@
 {
   "name": "binstree",
   "version": "1.1.0",
-  "description": "🌲 Binary search trees for ES6",
+  "description": "Binary search trees for ES6",
   "license": "MIT",
   "repository": "klaussinani/binstree",
   "author": {
