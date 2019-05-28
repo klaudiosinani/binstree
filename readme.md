@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  🌲 Binary search trees for ES6
+  Binary search trees for ES6
 </h4>
 
 <p align="center">
