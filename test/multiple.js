@@ -97,14 +97,29 @@ test('isFull', t => {
 });
 
 test('isPerfect', t => {
+  tree.clear()
+    .insert(10, 'A')
+    .insert(5, 'B')
+    .insert(15, 'C')
+    .insert(3, 'D')
+    .insert(7, 'E');
+
   t.false(tree.isPerfect());
+
+  tree.insert(12, 'F');
+  t.false(tree.isPerfect());
+
   tree.insert(17, 'G');
   t.true(tree.isPerfect());
-  tree.insert(11, 'H');
-  tree.insert(13, 'I');
+
+  tree
+    .insert(11, 'H')
+    .insert(13, 'I');
   t.false(tree.isPerfect());
-  tree.remove(11);
-  tree.remove(13);
+
+  tree
+    .remove(11)
+    .remove(13);
 });
 
 test('leafNodes', t => {
