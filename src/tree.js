@@ -255,25 +255,40 @@ class Tree {
   isPerfect() {
     let {_root: current} = this;
 
-    if (current) {
-      let sawLeaf = false;
-      const queue = [current];
+    if (!current) {
+      return true;
+    }
 
-      while (queue.length > 0) {
+    let leafDepth;
+    let sawLeaf = false;
+    let currentDepth = -1;
+    const queue = [current];
+
+    while (queue.length > 0) {
+      currentDepth += 1;
+      let {length: nodes} = queue;
+
+      while (nodes > 0) {
         current = queue.shift();
+        nodes -= 1;
 
-        if (current.degree === 1) {
+        if (current.isPartial()) {
           return false;
         }
 
         if (current.isLeaf()) {
+          if (sawLeaf && leafDepth !== currentDepth) {
+            return false;
+          }
+
           sawLeaf = true;
+          leafDepth = currentDepth;
         } else {
           if (sawLeaf) {
             return false;
           }
 
-          queue.push(current.left, current.right);
+          queue.push(...current.children);
         }
       }
     }
