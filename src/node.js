@@ -100,7 +100,7 @@ class Node {
   }
 
   isPartial() {
-    return this.degree === 1;
+    return this.isLeftPartial() || this.isRightPartial();
   }
 
   isRightPartial() {
