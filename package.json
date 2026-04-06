@@ -3,11 +3,11 @@
   "version": "1.2.0",
   "description": "Binary search trees for ES6",
   "license": "MIT",
-  "repository": "klaussinani/binstree",
+  "repository": "klaudiosinani/binstree",
   "author": {
-    "name": "Klaus Sinani",
-    "email": "klaussinani@gmail.com",
-    "url": "https://klaussinani.github.io"
+    "name": "Klaudio Sinani",
+    "email": "klaudiosinani@protonmail.ch",
+    "url": "https://klaudiosinani.com"
   },
   "engines": {
     "node": ">=6"

@@ -7,11 +7,11 @@
 </h4>
 
 <p align="center">
-  <a href="https://travis-ci.com/klaussinani/binstree">
-    <img alt="Build Status" src="https://travis-ci.com/klaussinani/binstree.svg?branch=master">
+  <a href="https://travis-ci.com/klaudiosinani/binstree">
+    <img alt="Build Status" src="https://travis-ci.com/klaudiosinani/binstree.svg?branch=master">
   </a>
-  <a href='https://coveralls.io/github/klaussinani/binstree?branch=master'>
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaussinani/binstree/badge.svg?branch=master">
+  <a href='https://coveralls.io/github/klaudiosinani/binstree?branch=master'>
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaudiosinani/binstree/badge.svg?branch=master">
   </a>
 </p>
 
@@ -19,7 +19,7 @@
 
 ES6 implementation of the binary search tree data structure with TypeScript support.
 
-Visit the [contributing guidelines](https://github.com/klaussinani/binstree/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+Visit the [contributing guidelines](https://github.com/klaudiosinani/binstree/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 ## Contents
 
@@ -55,7 +55,7 @@ A binary search tree is a rooted binary tree data structure, whose nodes contain
 
 Binstree exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
 
-Usage examples can be also found at the [`test`](https://github.com/klaussinani/binstree/tree/master/test) directory.
+Usage examples can be also found at the [`test`](https://github.com/klaudiosinani/binstree/tree/master/test) directory.
 
 ```js
 'use strict';
@@ -907,7 +907,7 @@ tree.insert(10, 'A').root.toPair();
 
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/binstree/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaudiosinani/binstree/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
 - Navigate to your local fork: `cd binstree`
@@ -916,20 +916,20 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related
 
-- [avlbinstree](https://github.com/klaussinani/avlbinstree) - AVL self-balancing binary search trees for ES6
-- [binoheap](https://github.com/klaussinani/binoheap) - Binomial heaps for ES6
-- [doublie](https://github.com/klaussinani/doublie) - Doubly circular & linear linked lists for ES6
-- [dsforest](https://github.com/klaussinani/dsforest) - Disjoint-set forests for ES6
-- [kiu](https://github.com/klaussinani/kiu) - FIFO Queues for ES6
-- [mheap](https://github.com/klaussinani/mheap) - Binary min & max heaps for ES6
-- [prioqueue](https://github.com/klaussinani/prioqueue) - Priority queues for ES6
-- [shtack](https://github.com/klaussinani/shtack) - LIFO Stacks for ES6
-- [singlie](https://github.com/klaussinani/singlie) - Singly circular & linear linked lists for ES6
+- [avlbinstree](https://github.com/klaudiosinani/avlbinstree) - AVL self-balancing binary search trees for ES6
+- [binoheap](https://github.com/klaudiosinani/binoheap) - Binomial heaps for ES6
+- [doublie](https://github.com/klaudiosinani/doublie) - Doubly circular & linear linked lists for ES6
+- [dsforest](https://github.com/klaudiosinani/dsforest) - Disjoint-set forests for ES6
+- [kiu](https://github.com/klaudiosinani/kiu) - FIFO Queues for ES6
+- [mheap](https://github.com/klaudiosinani/mheap) - Binary min & max heaps for ES6
+- [prioqueue](https://github.com/klaudiosinani/prioqueue) - Priority queues for ES6
+- [shtack](https://github.com/klaudiosinani/shtack) - LIFO Stacks for ES6
+- [singlie](https://github.com/klaudiosinani/singlie) - Singly circular & linear linked lists for ES6
 
 ## Team
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
 
 ## License
 
-[MIT](https://github.com/klaussinani/binstree/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/binstree/blob/master/license.md)
